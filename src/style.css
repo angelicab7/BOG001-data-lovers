@@ -1,129 +1,132 @@
+
 * {
-	margin: 0;
-	padding: 0;
-	font-family: "Baloo Thambi 2", cursive;
-	box-sizing: border-box;
-	font-size: 20px;
+
+  margin: 0;
+  padding: 0;
+  font-family: "Baloo Thambi 2", cursive;
+  box-sizing: border-box;
+  font-size: 20px;
+
+} 
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+/*Main menu styles*/
+header {
+  width: 100%;
+  padding: 1rem;
+  background: black;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.main-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.Icon-menu {
+  display: flex;
+  color: white;
+  cursor: pointer;
+  align-items: center;
+  font-size: 2rem;
+}
+
+.main-menu {
+  display: none;
+  width: 100%;
+  max-width: 12rem;
+  background-color: #11b0c8;
+  position: absolute;
+  top: 100%;
+  border-radius: 0 0.5rem 0.5rem 0.5rem;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+  margin-top: -0.5rem;
+}
+
+.main-menu::before {
+  content: "";
+  width: 0;
+  height: 0;
+  border-right: 20px solid transparent;
+  border-bottom: 15px solid #11b0c8;
+  position: absolute;
+  bottom: 100%;
+}
+
+.main-menu.active {
+  display: block;
+}
+
+.main-menu li {
+  width: 100%;
+  padding: 0.5rem 1.5rem;
+}
+
+.main-menu li a {
+  text-decoration: none;
+  color: white;
+}
+
+.logo {
+  max-width: 10rem;
+}
+.filter-input {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.banner {
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: black;
+}
+
+.banner img {
+  max-width: 400px;
+}
+
+.buttonC {
+  border: none;
+  color: white;
+  background: #11b0c8;
+  padding: 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+}
+.Character-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+
+@media screen and (min-width: 800px) {
+  .content1 {
+    display: flex;
+    flex-direction: row-reverse;
   }
-  
-  img {
-	width: 100%;
-	height: auto;
+
+  .img-content1 {
+    width: 70%;
   }
-  
-  /*Main menu styles*/
-  header {
-	width: 100%;
-	padding: 1rem;
-	background: black;
-	display: flex;
-	flex-direction: column;
-	position: relative;
+
+  .img-content1 img {
+    float: right;
+    width: 400px;
   }
-  
-  .main-nav {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	width: 100%;
+
+  .content-fondo img {
+    width: 70%;
   }
-  
-  .Icon-menu {
-	display: flex;
-	color: white;
-	cursor: pointer;
-	align-items: center;
-	font-size: 2rem;
-  }
-  
-  .main-menu {
-	display: none;
-	width: 100%;
-	max-width: 12rem;
-	background-color: #11b0c8;
-	position: absolute;
-	top: 100%;
-	border-radius: 0 0.5rem 0.5rem 0.5rem;
-	box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
-	margin-top: -0.5rem;
-  }
-  
-  .main-menu::before {
-	content: "";
-	width: 0;
-	height: 0;
-	border-right: 20px solid transparent;
-	border-bottom: 15px solid #11b0c8;
-	position: absolute;
-	bottom: 100%;
-  }
-  
-  .main-menu.active {
-	display: block;
-  }
-  
-  .main-menu li {
-	width: 100%;
-	padding: 0.5rem 1.5rem;
-  }
-  
-  .main-menu li a {
-	text-decoration: none;
-	color: white;
-  }
-  
-  .logo {
-	max-width: 10rem;
-  }
-  .filter-input {
-	display: flex;
-	justify-content: flex-end;
-  }
-  
-  .banner {
-	padding: 1rem;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	background: black;
-  }
-  
-  .banner img {
-	max-width: 400px;
-  }
-  
-  .buttonC {
-	border: none;
-	color: white;
-	background: #11b0c8;
-	padding: 15px;
-	border-radius: 5px;
-	cursor: pointer;
-	text-align: center;
-  }
-  .Character-row {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	margin-top: 10px;
-  }
-  
-  @media screen and (min-width: 800px) {
-	.content1 {
-	  display: flex;
-	  flex-direction: row-reverse;
-	}
-  
-	.img-content1 {
-	  width: 70%;
-	}
-  
-	.img-content1 img {
-	  float: right;
-	  width: 400px;
-	}
-  
-	.content-fondo img {
-	  width: 70%;
-	}
-  }
+}
