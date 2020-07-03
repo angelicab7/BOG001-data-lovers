@@ -1,13 +1,17 @@
+/*Utils-----*/
+.margin-t-1 {
+  margin-top: 1rem;
+}
+
+/*---------------*/
 
 * {
-
   margin: 0;
   padding: 0;
   font-family: "Baloo Thambi 2", cursive;
   box-sizing: border-box;
   font-size: 20px;
-
-} 
+}
 
 img {
   width: 100%;
@@ -49,6 +53,7 @@ header {
   border-radius: 0 0.5rem 0.5rem 0.5rem;
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
   margin-top: -0.5rem;
+  list-style: none;
 }
 
 .main-menu::before {
@@ -78,10 +83,6 @@ header {
 .logo {
   max-width: 10rem;
 }
-.filter-input {
-  display: flex;
-  justify-content: flex-end;
-}
 
 .banner {
   padding: 1rem;
@@ -95,20 +96,71 @@ header {
   max-width: 400px;
 }
 
-.buttonC {
+.button {
   border: none;
   color: white;
-  background: #11b0c8;
-  padding: 15px;
+  background-color: #11b0c8;
+  padding: 1rem;
   border-radius: 5px;
   cursor: pointer;
   text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+.button * {
+  text-decoration: none;
+  color: white;
+}
+
 .Character-row {
   display: flex;
   justify-content: center;
   align-items: center;
   margin-top: 10px;
+}
+
+.section {
+  padding: 15px;
+  color: #11b0c8;
+  display: flex;
+  justify-content: center;
+}
+
+h1 {
+  font-size: 1.5rem;
+}
+.filters {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: 100%;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.search-input {
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+}
+
+.search-input .button {
+  padding: 0.3rem;
+}
+
+select {
+  font-size: 0.8rem;
+}
+
+select option {
+  font-size: 1em;
+}
+
+.color {
+  border: 1px solid #11b0c8;
+  border-radius: 5px;
 }
 
 @media screen and (min-width: 800px) {
