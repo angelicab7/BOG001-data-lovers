@@ -4,11 +4,13 @@
 <head>
     <meta charset="UTF-8" />
     <link rel="shortcut icon" href="images/favicon-32x32.png" />
-    <title>Rick y Morty</title>
-    <link rel="stylesheet" href="style.css" />
+    <title>Rick and Morty</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/2eed4717d6.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=Baloo+Thambi+2:wght@500;600&display=swap" rel="stylesheet">
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="data.css">
+
 </head>
 
 <body>
@@ -37,38 +39,64 @@
                 <i class="fas fa-search"></i>
             </button>
         </div>
-        <select class="filter-input color margin-t-1">
-            <option>Order A-Z</option>
-            <option>Order Z-A</option>
-        </select>
+        <div class="Filters1">
+            <select class="filter-input color margin-t-1">
+                <option>Order A-Z</option>
+                <option>Order Z-A</option>
+            </select>
+    
+            <select class="filter-input color margin-t-1">
+                <option>Humans</option>
+                <option>Vampire</option>
+                <option>Disease</option>
+                <option>Unknown</option>
+                <option>Animal</option>
+                <option>Robot</option>
+                <option>Humanoid</option>
+                <option>Alien</option>
+               <option>Cronenberg</option> 
+            </select>
+         </div>
     </section>
 
+    <section class="Cards">
+       <div class="Baby-Poopybutthole width-1">
+        <img src="Images/Baby-Poopybutthole.jpeg" alt="image" class="Cards" />
+        <p class="text">Baby Poopybutthole</p>
+       </div>
+       <div class="Pizza-person width-1">
+        <img src="Images/Pizza-person.jpeg" width:alt="image" class="Cards" />
+        <p class="text">Pizza person</p>
+       </div>
+    </section>
 
+     <section class="Cards">
+       <div class="Talking-cat width-1">
+          <img src="Images/Talking-cat.jpeg" width:alt="image" class="Cards" />
+          <p class="text">Talking cat </p>
+       </div>
+       <div class="Phone-person width-1">
+        <img src="Images/Phone-person.jpeg" width:alt="image" class="Cards" />
+        <p class="text">Phone person</p>
+     </div>
+    </section>
 
-
-
-
- <!--footer--> 
-
- <footer id= "footer">
-
-    <div id= "icon">           
-        <img src="images/favicon-32x32.png" alt="img"/>
-    </div>      
-
+ <footer class="footer">
+    <div class= "RyM-icon">           
+        <img src="images/image.png" alt="img"/>
+    </div> 
      <div id="boxblack">
-        <p>@ All rights reserved</p> 
+        <p class="text margin-t-1">@ All rights reserved</p> 
+        <div class="Icons-socialMedia">
+            <i class="fab fa-twitter-square"></i>
+            <i class="fab fa-facebook-square"></i>
+            <i class="fab fa-youtube-square"></i>
+            <i class="fab fa-instagram-square"></i>
+          </div>
      </div>   
-   
  </footer>
 
-
-
-
-
     <script src="main.js" type="module"></script>
-
-
 </body>
 
 </html>
