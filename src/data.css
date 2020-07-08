@@ -1,0 +1,56 @@
+.section {
+  padding: 15px;
+  color: #11b0c8;
+  display: flex;
+  justify-content: center;
+}
+
+h1 {
+  font-size: 1.5rem;
+}
+
+.search-input {
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+}
+
+.search-input .button {
+  padding: 0.3rem;
+}
+
+select {
+  font-size: 0.8rem;
+}
+
+select option {
+  font-size: 1em;
+}
+
+.color {
+  border: 1px solid #11b0c8;
+  border-radius: 5px;
+}
+
+.Cards{
+    padding:10%;
+    display:flex;
+  justify-content: space-around;
+}
+.width-1{
+    width: 40%;
+}
+.Filters1{
+  display:flex;
+  width: 100%;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  justify-content: space-around;
+}
+.text{
+    margin-top:5px ;
+    font-size:0.5rem;
+    text-align: center;
+}
+
+
