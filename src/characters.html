@@ -1,14 +1,17 @@
 <!DOCTYPE html>
+
 <html lang="en">
 
 <head>
     <meta charset="UTF-8" />
     <link rel="shortcut icon" href="images/favicon-32x32.png" />
-    <title>Rick y Morty</title>
-    <link rel="stylesheet" href="style.css" />
+    <title>Rick and Morty</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/2eed4717d6.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=Baloo+Thambi+2:wght@500;600&display=swap" rel="stylesheet">
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="data.css">
+
 </head>
 
 <body>
@@ -16,8 +19,8 @@
         <div class="main-nav">
             <div class="Icon-menu" id="main-menu-button">
                 <i class="fas fa-bars"> </i>
-            </div>            	
-      <a href="index.html"><img src="Images/logo.png" alt="logo_image" class="logo">
+            </div>
+            <a href="index.html"><img src="Images/logo.png" alt="logo_image" class="logo">
         </div>
         <ul class="main-menu">
             <li class="menu-item"> <a href="https://www.rickandmorty.com/">About us</a></li>
@@ -26,6 +29,8 @@
             <li class="menu-item"> <a href="">Contact</a></li>
         </ul>
     </header>
+
+
     <div class="section">
         <h1>Characters</h1>
     </div>
@@ -37,10 +42,28 @@
                 <i class="fas fa-search"></i>
             </button>
         </div>
-        <select class="filter-input color margin-t-1">
-            <option>Order A-Z</option>
-            <option>Order Z-A</option>
-        </select>
+        <div class="Filters1">
+            <select class="filter-input color margin-t-1">
+                <option>Order A-Z</option>
+                <option>Order Z-A</option>
+            </select>
+
+            <select class="filter-input color margin-t-1">
+                <option>Humans</option>
+                <option>Vampire</option>
+                <option>Disease</option>
+                <option>Unknown</option>
+                <option>Animal</option>
+                <option>Robot</option>
+                <option>Humanoid</option>
+                <option>Alien</option>
+                <option>Cronenberg</option>
+            </select>
+        </div>
+    </section>
+
+    <section class="Cards" id="personajitos">    
+
     </section>
 
 
@@ -48,27 +71,35 @@
 
 
 
- <!--footer--> 
+    
 
- <footer id= "footer">
+    <footer class="footer">
+        <div class="RyM-icon">
+            <img src="images/image.png" alt="img" />
+        </div>
+        <div id="boxblack">
+            <p class="text margin-t-1">@ All rights reserved</p>
+            <div class="Icons-socialMedia">
+                <i class="fab fa-twitter-square"></i>
+                <i class="fab fa-facebook-square"></i>
+                <i class="fab fa-youtube-square"></i>
+                <i class="fab fa-instagram-square"></i>
+            </div>
+        </div>
+    </footer>
 
-    <div id= "icon">           
-        <img src="images/favicon-32x32.png" alt="img"/>
-    </div>      
 
-     <div id="boxblack">
-        <p>@ All rights reserved</p> 
-     </div>   
-   
- </footer>
-
-
-
-
-
-    <script src="main.js" type="module"></script>
-
+    
+    <script src="data.js"></script>
+    
+    <script src="main.js"></script>
 
 </body>
+
+<script>
+    
+
+
+</script>
 
 </html>

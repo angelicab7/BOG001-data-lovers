@@ -1,37 +1,29 @@
-async function getCharacters() {
-  const response = await fetch('https://rickandmortyapi.com/api/character');
-  const data = await response.json();
-  console.log(data);
+//halar data//
 
+let element = document.getElementById('personajitos')
 
-};
-
-getCharacters();
-
-
-async function getLocation() {
-  const response = await fetch('https://rickandmortyapi.com/api/location');
-  const data = await response.json();
-  console.log(data);
-
+for (var i = 1; i < 50; i++) {
+    fetch('https://rickandmortyapi.com/api/character/' + i + '/').then(response => {
+        response.json().then(data => {
+            debugger
+            element.innerHTML = `
+            <div>
+                <img src='${data.image}'/>
+                <p>${data.name}</p>
+                <p>${data.status}</p>
+                <p>${data.species}</p>
+                <p>${data.type}</p>
+                <p>${data.gender}</p>
+                <p>${data.origin.name}</p>
+                
+            </div>
+            `;
+            console.log(data)
+        });
+    })
+        .catch(err => console.log(err));
 }
-getLocation();
-
-
-async function getEpisode() {
-  const response = await fetch('https://rickandmortyapi.com/api/episode');
-  const data = await response.json();
-  console.log(data);
-
-}
-getEpisode();
 
 
 
-
-/* fetch('https://rickandmortyapi.com/api/character?page=2').then(response => {
-      response.json().then(data => {
-          console.log(data);
-      });
-  });*/
 
