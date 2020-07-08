@@ -1,4 +1,4 @@
-async function getCharacters() {
+/*async function getCharacters() {
   const response = await fetch('https://rickandmortyapi.com/api/character');
   const data = await response.json();
   console.log(data);
@@ -24,14 +24,14 @@ async function getEpisode() {
   console.log(data);
 
 }
-getEpisode();
+getEpisode();*/
 
 
 
 
-/* fetch('https://rickandmortyapi.com/api/character?page=2').then(response => {
+/fetch('https://rickandmortyapi.com/api/character?page=2').then(response => {
       response.json().then(data => {
           console.log(data);
       });
-  });*/
+  });
 

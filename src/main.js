@@ -1,3 +1,11 @@
+/*ejemplo*/
+
+import data from ./data/rickandmorty/rickandmorty.js';
+
+
+
+
+
 
 const buttonMenu = document.querySelector('#main-menu-button');
 
