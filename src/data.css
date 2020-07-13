@@ -1,56 +1,91 @@
 .section {
-    padding: 15px;
-    color: #11b0c8;
-    display: flex;
-    justify-content: center;
-  }
-  
-  h1 {
-    font-size: 1.5rem;
-  }
- 
-  .search-input {
-    display: flex;
-    align-items: stretch;
-    justify-content: center;
-  }
-  
-  .search-input .button {
-    padding: 0.3rem;
-  }
-  
-  select {
-    font-size: 0.8rem;
-  }
-  
-  select option {
-    font-size: 1em;
-  }
-  
-  .color {
-    border: 1px solid #11b0c8;
-    border-radius: 5px;
-  }
-  
-  .Cards{
-      padding:10%;
-      display:flex;
-    justify-content: space-around;
-  }
-  .width-1{
-      width: 40%;
-  }
-  .Filters1{
-    display:flex;
-    width: 100%;
-    padding-left: 1rem;
-    padding-right: 1rem;
-    justify-content: space-around;
-  }
-  .text{
-      margin-top:5px ;
-      font-size:0.5rem;
-      text-align: center;
-  }
-  
+  padding: 15px;
+  color: #11b0c8;
+  display: flex;
+  justify-content: center;
+}
 
+.search-input {
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+}
+
+.site-search {
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 5px 0 0 5px;
+  flex: 1;
+}
+
+.button.search {
+  border-radius: 0 5px 5px 0;
+  width: 3rem;
+  height: 3rem;
+  padding: 0.3rem;
+}
+
+select {
+  font-size: 1rem;
+  padding: 0.5rem 2rem;
+}
+
+select option {
+  font-size: 1em;
+}
+
+.filters {
+  display: flex;
+  width: 100%;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  justify-content: space-around;
+  flex-direction: column;
+}
+
+/* Cards Styles */
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.grid > * {
+  flex: 1 1 100%;
+  padding: 1rem;
+}
+
+.column {
+  display: flex;
+}
+
+.card {
+  border: 3px solid #11b0c8;
+  border-radius: 1.5%;
+}
+
+.card-content {
+  padding: 1rem;
+}
+
+.card-title {
+  margin-top: 5%;
+}
+
+/*Tablet--------------------*/
+@media screen and (min-width: 768px) {
+  .filters {
+    flex-direction: row;
+  }
+
+  .grid > * {
+    flex: 1 1 50%;
+  }
+}
+
+/* Desktop---------------------- */
+@media screen and (min-width: 1127px) {
+  .grid > * {
+    flex: 1 1 25%;
+  }
+}

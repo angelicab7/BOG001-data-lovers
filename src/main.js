@@ -1,3 +1,4 @@
+
 /*ejemplo*/
 
 import data from ./data/rickandmorty/rickandmorty.js';
@@ -5,6 +6,9 @@ import data from ./data/rickandmorty/rickandmorty.js';
 
 
 
+
+
+/* menu*/
 
 
 const buttonMenu = document.querySelector('#main-menu-button');
