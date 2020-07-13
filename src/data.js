@@ -1,7 +1,17 @@
-async function getCharacters() {
-    let charactersContainer = document.querySelector('#characters-container')
-    const response = await fetch('https://rickandmortyapi.com/api/character');
+
+/*Loading indicator*/ 
+let currentPage = 1;
+const loadingIndicator = document.querySelector('.loading-indicator');
+let isLoading = false;
+
+async function getCharacters(page = 1) {
+    let charactersContainer = document.querySelector('#characters-container');
+    loadingIndicator.classList.add('active');
+    isLoading = true;
+    const response = await fetch(`https://rickandmortyapi.com/api/character/?page=${page}`);
     const data = await response.json();
+    isLoading = false;
+    loadingIndicator.classList.remove('active');
     console.log(data);
     data.results.forEach(character =>
         charactersContainer.innerHTML += cardCharacter(
@@ -17,7 +27,7 @@ async function getCharacters() {
 
 getCharacters();
 
-/*Flip card*/ 
+/*Flip card*/
 function cardCharacter(urlImage, name, status, location, origin, specie) {
     return (
         `
@@ -44,3 +54,29 @@ function cardCharacter(urlImage, name, status, location, origin, specie) {
         `
     )
 };
+
+/*Infinite Scroll*/
+function getDocumentHeight() {
+    const body = document.body;
+    const html = document.documentElement;
+
+    return Math.max(
+        body.scrollHeight, body.offsetHeight,
+        html.clientHeight, html.scrollHeight, html.offsetHeight
+    );
+};
+
+function getScrollTop() {
+    return (window.pageYOffset !== undefined) ? window.pageYOffset : (document.documentElement || document.body.parentNode || document.body).scrollTop;
+}
+
+window.onscroll = function () {
+    if (getScrollTop() + 40 < getDocumentHeight() - window.innerHeight) {
+        return;
+    }
+    if (!isLoading) {
+        currentPage++;
+        getCharacters(currentPage);
+    }
+};
+
