@@ -1,3 +1,4 @@
+/* menu*/
 
 const buttonMenu = document.querySelector('#main-menu-button');
 
