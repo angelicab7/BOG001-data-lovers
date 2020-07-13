@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="en">
 
 <head>
@@ -18,8 +19,8 @@
         <div class="main-nav">
             <div class="Icon-menu" id="main-menu-button">
                 <i class="fas fa-bars"> </i>
-            </div>            	
-      <a href="index.html"><img src="Images/logo.png" alt="logo_image" class="logo">
+            </div>
+            <a href="index.html"><img src="Images/logo.png" alt="logo_image" class="logo">
         </div>
         <ul class="main-menu">
             <li class="menu-item"> <a href="https://www.rickandmorty.com/">About us</a></li>
@@ -28,91 +29,63 @@
             <li class="menu-item"> <a href="">Contact</a></li>
         </ul>
     </header>
-    <div class="section">
-        <h1>Characters</h1>
-    </div>
 
-    <section class="filters">
-        <div class="search-input">
-            <input type="search" class="site-search color" name="q">
-            <button class="button">
-                <i class="fas fa-search"></i>
-            </button>
+
+    <div class="container">
+        <div class="section">
+            <h1>Characters</h1>
         </div>
-        <div class="Filters1">
-            <select class="filter-input color margin-t-1">
-                <option>Order A-Z</option>
-                <option>Order Z-A</option>
+
+        <section class="filters margin-b-1 margin-t-1">
+            <div class="search-input margin-b-1">
+                <input type="search" class="site-search color" name="q">
+                <button class="button search">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+            <select class="filter-input color margin-b-1">
+                <option value="order" class="order">Order</option>
+                <option value="a-z">Order A-Z</option>
+                <option value="z-a">Order Z-A</option>
             </select>
-    
-            <select class="filter-input color margin-t-1">
-                <option>Humans</option>
-                <option>Vampire</option>
-                <option>Disease</option>
-                <option>Unknown</option>
-                <option>Animal</option>
-                <option>Robot</option>
-                <option>Humanoid</option>
-                <option>Alien</option>
-               <option>Cronenberg</option> 
+            <select class="filter-input color margin-b-1">
+                <option value="species">Species</option>
+                <option value="species.Human">Humans</option>
+                <option value="species.Vampire">Vampire</option>
+                <option value="species.Disease">Disease</option>
+                <option value="species.unknown">Unknown</option>
+                <option value="species.Animal">Animal</option>
+                <option value="species.Robot">Robot</option>
+                <option value="species.Humanoid">Humanoid</option>
+                <option value="species.Alien">Alien</option>
+                <option value="species.Cronenberg">Cronenberg</option>
+                <option value="species.Poopybutthole">Poopybutthole</option>
             </select>
-         </div>
-    </section>
+        </section>
 
-    <section class="Cards">
-       <div class="Baby-Poopybutthole width-1 color">
-        <img src="Images/Baby-Poopybutthole.jpeg" alt="image" class="Cards" />
-        <h1 class="text">Baby Poopybutthole</h1>
-        <p class="text" >
-          Alive - Poopybutthole
-          Unknown
-        </p>
-       </div>
-       <div class="Pizza-person width-1 color" >
-        <img src="Images/Pizza-person.jpeg" width:alt="image" class="Cards" />
-        <h1 class="text">Pizza person </h1>
-          <p class="text" >
-            Alive - Humanoid
-            Earth (Phone Dimension)
-          </p>
-       </div>
-    </section>
+        <section class="grid" id="characters-container">
 
-     <section class="Cards">
-       <div class="Talking-cat width-1 color">
-          <img src="Images/Talking-cat.jpeg" width:alt="image" class="Cards" />
-          <h1 class="text">Talking cat </h1>
-          <p class="text" >
-            Alive - Humanoid
-            Earth (Phone Dimension)
-          </p>
-       </div>
-       <div class="Phone-person width-1 color">
-        <img src="Images/Phone-person.jpeg" width:alt="image" class="Cards" />
-        <h1 class="text">Phone person</h1>
-        <p class="text" >
-          Alive -Humanoid
-          Earth (Phone Dimension)
-        </p>
-     </div>
-    </section>
+        </section>
+        <div class="loading-indicator">
+            LOADING...
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="RyM-icon">
+            <img src="images/image.png" alt="img" />
+        </div>
+        <div id="boxblack">
+            <p class="text-f margin-t-1">@ All rights reserved</p>
+            <div class="Icons-socialMedia">
+                <i class="fab fa-twitter-square"></i>
+                <i class="fab fa-facebook-square"></i>
+                <i class="fab fa-youtube-square"></i>
+                <i class="fab fa-instagram-square"></i>
+            </div>
+        </div>
+    </footer>
 
-
- <footer class="footer">
-    <div class= "RyM-icon">           
-        <img src="images/image.png" alt="img"/>
-    </div> 
-     <div id="boxblack">
-        <p class="text-f margin-t-1">@ All rights reserved</p> 
-        <div class="Icons-socialMedia">
-            <i class="fab fa-twitter-square"></i>
-            <i class="fab fa-facebook-square"></i>
-            <i class="fab fa-youtube-square"></i>
-            <i class="fab fa-instagram-square"></i>
-          </div>
-     </div>   
- </footer>
-
+    <script src="data.js" type="module"></script>
     <script src="main.js" type="module"></script>
 </body>
 
