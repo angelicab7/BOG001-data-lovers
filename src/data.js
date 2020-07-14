@@ -1,10 +1,4 @@
 
-/*async function getCharacters() {
-  const response = await fetch('https://rickandmortyapi.com/api/character');
-  const data = await response.json();
-  console.log(data);
-
-
 /*Loading indicator*/ 
 let currentPage = 1;
 const loadingIndicator = document.querySelector('.loading-indicator');
@@ -75,17 +69,6 @@ function getDocumentHeight() {
 function getScrollTop() {
     return (window.pageYOffset !== undefined) ? window.pageYOffset : (document.documentElement || document.body.parentNode || document.body).scrollTop;
 }
-
-getEpisode();*/
-
-
-
-
-/fetch('https://rickandmortyapi.com/api/character?page=2').then(response => {
-      response.json().then(data => {
-          console.log(data);
-      });
-  });
 
 
 window.onscroll = function () {

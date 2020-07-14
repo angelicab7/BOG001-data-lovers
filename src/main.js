@@ -1,18 +1,5 @@
-
-/*ejemplo*/
-
-import data from ./data/rickandmorty/rickandmorty.js';
-
-
-
-
-
-
 /* menu*/
-
-
 const buttonMenu = document.querySelector('#main-menu-button');
-
 buttonMenu.addEventListener('click', toggleMenu);
 
 /**
