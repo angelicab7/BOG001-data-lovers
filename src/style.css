@@ -18,6 +18,7 @@
 /*---------------*/
 html {
   font-size: 16px;
+  scroll-behavior: smooth;
 }
 
 * {
@@ -262,6 +263,17 @@ header {
   margin-top: auto;
   font-size: 1.5rem;
   text-align: center;
+}
+
+#backTop-button {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  font-size: 3rem;
+  display: flex;
+  padding: 1rem;
+  cursor: pointer;
+  color: #11b0c8;
 }
 
 /*Tablet--------------------*/
