@@ -116,13 +116,11 @@ function getScrollTop() {
     return (window.pageYOffset !== undefined) ? window.pageYOffset : (document.documentElement || document.body.parentNode || document.body).scrollTop;
 }
 
-<<<<<<< HEAD
 
-=======
 /**
  * Este evento es llamado cada vez que el scroll se mueve
  */
->>>>>>> 20081062cc116dbb089f09282449824444a62a1a
+
 window.onscroll = function () {
     /**
      * Con la pocision del scroll se le suman 40 pixeles
