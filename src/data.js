@@ -149,9 +149,16 @@ window.onscroll = function () {
 const searchForm = document.querySelector('#searchIn');
 const searchButton = document.querySelector('#searchButton');
 
+loadingIndicator.classList.add('active');
+isLoading = true;
+
 const filter = async () => {
     const response = await fetch(`https://rickandmortyapi.com/api/character/?name=${encodeURIComponent(searchForm.value)}`);
     const data = await response.json();
+
+    isLoading = false;
+    loadingIndicator.classList.remove('active');
+    
     console.log(data);
     charactersContainer.innerHTML = "";
     data.results.forEach(character =>
