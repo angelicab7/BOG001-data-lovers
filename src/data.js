@@ -143,8 +143,7 @@ window.onscroll = function () {
 };
 
 
-<<<<<<< HEAD
-=======
+
 //Buscador//
 
 const searchForm = document.querySelector('#searchIn');
@@ -168,4 +167,4 @@ const filter = async () => {
 }
 
 searchButton.addEventListener('click', filter)
->>>>>>> 0f848c83512b8a30a613c5ac6e2db2b8b5e7e2e9
+
