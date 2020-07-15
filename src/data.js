@@ -114,9 +114,11 @@ function getScrollTop() {
     return (window.pageYOffset !== undefined) ? window.pageYOffset : (document.documentElement || document.body.parentNode || document.body).scrollTop;
 }
 
+
 /**
  * Este evento es llamado cada vez que el scroll se mueve
  */
+
 window.onscroll = function () {
     /**
      * Con la pocision del scroll se le suman 40 pixeles
@@ -139,6 +141,7 @@ window.onscroll = function () {
         }
     }
 };
+
 
 
 //Buscador//
@@ -164,3 +167,4 @@ const filter = async () => {
 }
 
 searchButton.addEventListener('click', filter)
+
