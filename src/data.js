@@ -11,6 +11,8 @@ let currentPage = 1;
 // Mantiene un registro de la cantidad de paginas de personajes que tiene la API
 let totalPages = 30;
 
+let charactersContainer = document.querySelector('#characters-container');
+
 /*Scroll to the top */
 const backToTopButton = document.querySelector('#backTop-button');
 backToTopButton.addEventListener("click", () => {
@@ -26,7 +28,6 @@ backToTopButton.addEventListener("click", () => {
 async function getCharacters(page = 1) {
     // Si currentPage es 31 ya no dejará pedir más datos a la API porque quiere decir que llegamos al final y ya pedimos todos los personajes
     if (currentPage <= totalPages) {
-        let charactersContainer = document.querySelector('#characters-container');
 
         // Añadimos la clase active a nuestro Loading indicator en el HTML
         loadingIndicator.classList.add('active');
@@ -64,29 +65,26 @@ getCharacters();
 function cardCharacter(urlImage, name, status, location, origin, specie) {
     return (
         `
-        
-<div class="card-container">
-<div class="card card-front">
-    <img src="${urlImage}" alt="image" class="card-image" />
-    <div class="card-content">
-        <h3 class="card-title">${name}</h3>
-    </div>
-</div>
-<div class="card card-back">
-    <p class="card-description">
-        Status: ${status}
-    </p>
-    <p class="card-description">
-        Specie: ${specie}
-    </p>
-    <p class="card-description">
-        Origin: ${origin}
-    </p>
-    <p class="card-description">
-        Current location: ${location}
-    </p>
-</div>
-</div>
+        <div class="column">
+                <div class="card">
+                    <img src="${urlImage}" alt="image" class="card-image" />
+                    <div class="card-content">
+                        <h3 class="card-title">${name}</h3>
+                        <p class="card-description">
+                            Status: ${status}
+                        </p>
+                        <p class="card-description">
+                            Specie: ${specie}
+                        </p>
+                        <p class="card-description">
+                            Origin: ${origin}
+                        </p>
+                        <p class="card-description">
+                            Current location: ${location}
+                        </p>
+                    </div>
+                </div>
+            </div>
         `
     )
 };
@@ -145,3 +143,29 @@ window.onscroll = function () {
 };
 
 
+<<<<<<< HEAD
+=======
+//Buscador//
+
+const searchForm = document.querySelector('#searchIn');
+const searchButton = document.querySelector('#searchButton');
+
+const filter = async () => {
+    const response = await fetch(`https://rickandmortyapi.com/api/character/?name=${encodeURIComponent(searchForm.value)}`);
+    const data = await response.json();
+    console.log(data);
+    charactersContainer.innerHTML = "";
+    data.results.forEach(character =>
+        charactersContainer.innerHTML += cardCharacter(
+            character.image,
+            character.name,
+            character.status,
+            character.location.name,
+            character.origin.name,
+            character.specie
+        )
+    );
+}
+
+searchButton.addEventListener('click', filter)
+>>>>>>> 0f848c83512b8a30a613c5ac6e2db2b8b5e7e2e9
