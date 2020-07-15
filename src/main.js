@@ -13,7 +13,7 @@ function toggleMenu(event) {
     mainMenu.classList.toggle('active');
 }
 
-//funcion slider//}
+//funcion slider//
 
 const slides=document.querySelector(".slider").children;
 const indicator=document.querySelector(".slider-indicator").children;
