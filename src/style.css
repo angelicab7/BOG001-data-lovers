@@ -1,6 +1,6 @@
 /*Utils-----*/
 .margin-t-1 {
-  margin-top: 1rem;
+  margin-top: 1.5rem;
 }
 
 .margin-t-2 {
@@ -51,7 +51,7 @@ img {
 header {
   width: 100%;
   padding: 1rem;
-  background: black;
+  background:black;
   display: flex;
   flex-direction: column;
   position: relative;
@@ -121,7 +121,7 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: black;
+  background:black;
 }
 
 .banner img {
@@ -154,7 +154,7 @@ header {
 }
 .button * {
   text-decoration: none;
-  color: white;
+  color:white;
   font-size: 1.5rem;
 }
 
@@ -162,17 +162,15 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 10px;
+ padding: 6rem;
 }
 
 /*Slider styles*/
 
 .funfacts {
-  min-height: 100vh;
   background-color: white;
-  float: left;
   width: 100%;
-  padding: 100px 15px;
+  padding: 3rem;
 }
 
 .container {
@@ -191,12 +189,12 @@ header {
 }
 
 .funfacts .slider {
-  border: 1px solid #333333;
+  border: 1px solid black;
   max-width: 600px;
   margin: auto;
   text-align: center;
   padding: 30px;
-  background: black;
+  background:  black;
 }
 .funfacts .slider .slide {
   display: none;
@@ -217,7 +215,7 @@ header {
 }
 .funfacts .slider p {
   font-size: 18px;
-  color: #ffffff;
+  color: white;
   word-spacing: 2px;
 }
 
@@ -232,7 +230,7 @@ header {
   display: inline-block;
   margin: 0 8px;
   opacity: 0.2;
-  border: 4px solid #fff;
+  border: 4px solid white;
   cursor: pointer;
   transition: opacity 1s ease;
 }
@@ -243,26 +241,33 @@ header {
 /*footer*/
 
 #boxblack {
-  background: black;
+  background:black;
+  padding: 1rem;
 }
 
 #boxblack p {
   color: white;
   text-align: center;
+  font-size: 1rem;
 }
 
-.RyM-icon {
-  width: 5%;
-  display: block;
-  margin: auto;
-}
 
 .Icons-socialMedia {
-  color: white;
+  color:#11b0c8;
   cursor: pointer;
   margin-top: auto;
-  font-size: 1.5rem;
-  text-align: center;
+  font-size: 2rem;
+  justify-content: flex-end;
+  
+}
+.Icons-socialMedia > a{
+  padding: 0.5rem;
+}
+.text-color{
+  color:#11b0c8;
+}
+.text-footer{
+  margin-top: 2rem;
 }
 
 #backTop-button {
@@ -302,22 +307,4 @@ header {
   }
 }
 
-@media screen and (min-width: 800px) {
-  .content1 {
-    display: flex;
-    flex-direction: row-reverse;
-  }
 
-  .img-content1 {
-    width: 70%;
-  }
-
-  .img-content1 img {
-    float: right;
-    width: 400px;
-  }
-
-  .content-fondo img {
-    width: 70%;
-  }
-}

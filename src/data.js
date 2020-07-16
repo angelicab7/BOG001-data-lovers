@@ -23,11 +23,13 @@ backToTopButton.addEventListener("click", () => {
     window.scrollTo(0, 0);
 });
 
+let filtersApplied = false;
+
 
 /*get characters*/
 async function getCharacters(page = 1) {
     // Si currentPage es 31 ya no dejará pedir más datos a la API porque quiere decir que llegamos al final y ya pedimos todos los personajes
-    if (currentPage <= totalPages) {
+    if (currentPage <= totalPages && !filtersApplied) {
 
         // Añadimos la clase active a nuestro Loading indicator en el HTML
         loadingIndicator.classList.add('active');
@@ -114,9 +116,11 @@ function getScrollTop() {
     return (window.pageYOffset !== undefined) ? window.pageYOffset : (document.documentElement || document.body.parentNode || document.body).scrollTop;
 }
 
+
 /**
  * Este evento es llamado cada vez que el scroll se mueve
  */
+
 window.onscroll = function () {
     /**
      * Con la pocision del scroll se le suman 40 pixeles
@@ -141,12 +145,19 @@ window.onscroll = function () {
 };
 
 
+
 //Buscador//
 
 const searchForm = document.querySelector('#searchIn');
 const searchButton = document.querySelector('#searchButton');
 
 const filter = async () => {
+
+    if(searchForm.value) {
+        filtersApplied = true;
+    } else {
+        filtersApplied = false;
+    }
     const response = await fetch(`https://rickandmortyapi.com/api/character/?name=${encodeURIComponent(searchForm.value)}`);
     const data = await response.json();
     console.log(data);
@@ -164,3 +175,7 @@ const filter = async () => {
 }
 
 searchButton.addEventListener('click', filter)
+
+/*Sort function*/
+
+const listToSort = [ specie ]
