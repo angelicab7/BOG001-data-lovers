@@ -1,5 +1,5 @@
 # Data Lovers Rick and Morty
-
+https://64.media.tumblr.com/48f18afc4f876ed51ef5c49a349805b8/tumblr_nveq6eSUd71uhyjdxo1_500.gif
 
 ### DEFINICIÓN DEL PRODUCTO
 
