@@ -67,6 +67,10 @@ header {
   border: 2px solid #11b0c8;
   border-radius: 5px;
 }
+.font-color{
+  background-color:#d6f2f7 ;
+  
+}
 .Icon-menu {
   display: flex;
   color: white;

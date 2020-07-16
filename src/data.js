@@ -68,22 +68,38 @@ function cardCharacter(urlImage, name, status, location, origin, specie) {
     return (
         `
         <div class="column">
-                <div class="card">
-                    <img src="${urlImage}" alt="image" class="card-image" />
-                    <div class="card-content">
-                        <h3 class="card-title">${name}</h3>
-                        <p class="card-description">
-                            Status: ${status}
-                        </p>
-                        <p class="card-description">
-                            Specie: ${specie}
-                        </p>
-                        <p class="card-description">
-                            Origin: ${origin}
-                        </p>
-                        <p class="card-description">
-                            Current location: ${location}
-                        </p>
+                <div class="card flip">
+                    <div class="card-container">
+                        <div class="card-front">
+                            <img src="${urlImage}" alt="image" class="card-image" />
+                            <div class="card-content">
+                                <h3 class="card-title">${name}</h3>
+                            </div>
+                        </div>
+                        <div class="card-back font-color">
+                            <div class="card-content">
+                                <p class="card-description">
+                                    Status: ${status} <div class="conv-icon" id="main-menu-button">
+                                     <i class="fas fa-heart"></i> 
+                                    </div>
+                                </p>
+                                <p class="card-description">
+                                    Specie: ${specie} <div class="conv-icon" id="main-menu-button">
+                                    <i class="fas fa-user-circle"></i>
+                                   </div>
+                                </p>
+                                <p class="card-description"> 
+                                    Origin: ${origin} <div class="conv-icon" id="main-menu-button">
+                                    <i class="fas fa-globe-americas"></i>
+                                   </div>
+                                </p>
+                                <p class="card-description">
+                                    Current location: ${location} <div class="conv-icon" id="main-menu-button">
+                                    <i class="fas fa-map-pin"></i>
+                                   </div>
+                                </p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
