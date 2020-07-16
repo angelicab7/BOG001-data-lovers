@@ -1,5 +1,5 @@
 # Data Lovers Rick and Morty
-https://64.media.tumblr.com/48f18afc4f876ed51ef5c49a349805b8/tumblr_nveq6eSUd71uhyjdxo1_500.gif
+<iframe src="https://giphy.com/embed/l378BzHA5FwWFXVSg" width="480" height="270" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/adultswim-l378BzHA5FwWFXVSg">via GIPHY</a></p>
 
 ### DEFINICIÓN DEL PRODUCTO
 
