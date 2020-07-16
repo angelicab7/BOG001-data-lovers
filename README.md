@@ -3,6 +3,7 @@
 <img src="src\images\giphy.gif" alt="Funny image">
 
 
+
 ### DEFINICIÓN DEL PRODUCTO
 
 Nuestro proyecto es una pagina de Rick and Morty que va a facilitar a los nuevos  usuarios y amantes de la serie hacer sus investigaciones sobre cada personaje, poder filtrar por especie, ordenar de la A-Z, tiene un buscador por si quieren hacer una búsqueda de un personaje en especifico, ademas que tiene una sección dedicada especialmente a los datos curiosos para conocer un poco mas de la serie.
