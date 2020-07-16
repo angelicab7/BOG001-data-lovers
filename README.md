@@ -1,6 +1,6 @@
 # Data Lovers Rick and Morty
 
-<img src="/images/giphy.gif" alt="Funny image">
+
 
 ### DEFINICIÓN DEL PRODUCTO
 
