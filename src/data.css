@@ -1,9 +1,13 @@
 .section {
-  padding: 15px;
+  padding: 3rem;
   color: #11b0c8;
   display: flex;
   justify-content: center;
+
 }
+.section >h1{
+  font-size: 2.5rem;
+} 
 
 .search-input {
   display: flex;
@@ -76,6 +80,9 @@ select option {
 .card-title {
   margin-top: 5%;
 }
+.order{
+  background-color: #bff0f8;  
+}
 
 /*efecto zoom*/
 
@@ -97,6 +104,11 @@ select option {
   -moz-transition-timing-function: ease-out;
   -moz-transition-duration: 100ms;
 
+}
+/*Character´s name*/
+
+h3{
+  font-size: 1.3rem;
 }
 
 /*Tablet--------------------*/
