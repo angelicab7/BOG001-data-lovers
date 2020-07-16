@@ -1,6 +1,6 @@
 # Data Lovers Rick and Morty
 
-<div style="width:100%;height:0;padding-bottom:56%;position:relative;"><iframe src="https://giphy.com/embed/l378BzHA5FwWFXVSg" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div><p><a href="https://giphy.com/gifs/adultswim-l378BzHA5FwWFXVSg">via GIPHY</a></p>
+<img src="/images/giphy.gif" alt="Funny image">
 
 ### DEFINICIÓN DEL PRODUCTO
 
