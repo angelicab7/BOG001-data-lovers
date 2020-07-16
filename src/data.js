@@ -79,23 +79,23 @@ function cardCharacter(urlImage, name, status, location, origin, specie) {
                         <div class="card-back font-color">
                             <div class="card-content">
                                 <p class="card-description">
-                                    Status: ${status} <div class="conv-icon" id="main-menu-button">
-                                     <i class="fas fa-heart"></i> 
+                                     <div class="conv-icon" id="main-menu-button"> 
+                                     <i class="fas fa-heart"></i> Status: ${status}
                                     </div>
                                 </p>
                                 <p class="card-description">
-                                    Specie: ${specie} <div class="conv-icon" id="main-menu-button">
-                                    <i class="fas fa-user-circle"></i>
+                                     <div class="conv-icon" id="main-menu-button">
+                                    <i class="fas fa-user-circle"></i>  Specie: ${specie}
                                    </div>
                                 </p>
                                 <p class="card-description"> 
-                                    Origin: ${origin} <div class="conv-icon" id="main-menu-button">
-                                    <i class="fas fa-globe-americas"></i>
+                                    <div class="conv-icon" id="main-menu-button"> 
+                                    <i class="fas fa-globe-americas"></i>  Origin: ${origin}
                                    </div>
                                 </p>
                                 <p class="card-description">
-                                    Current location: ${location} <div class="conv-icon" id="main-menu-button">
-                                    <i class="fas fa-map-pin"></i>
+                                     <div class="conv-icon" id="main-menu-button"> 
+                                    <i class="fas fa-map-pin"></i> Current location: ${location}
                                    </div>
                                 </p>
                             </div>
