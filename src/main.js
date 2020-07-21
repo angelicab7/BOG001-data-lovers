@@ -1,3 +1,5 @@
+import {getCharacters, species, cardCharacter} from './data.js';
+
 /* menu*/
 const buttonMenu = document.querySelector('#main-menu-button');
 buttonMenu.addEventListener('click', toggleMenu);
@@ -10,6 +12,8 @@ function toggleMenu(event) {
     const mainMenu = document.querySelector('.main-menu');
     mainMenu.classList.toggle('active');
 }
+
+
 
 //funcion slider//
 
@@ -32,3 +36,7 @@ const indicator=document.querySelector(".slider-indicator").children;
 
      })
  }
+
+
+
+

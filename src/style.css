@@ -54,7 +54,7 @@ header {
   background:black;
   display: flex;
   flex-direction: column;
-  position: relative;
+  position: fixed;
 }
 
 .main-nav {
@@ -134,6 +134,7 @@ header {
 
 #banner-mobile-image {
   display: block;
+  margin-top: 120px;
 }
 
 #banner-tablet-image {
@@ -207,6 +208,8 @@ header {
   display: block;
   animation: slide 1s ease;
 }
+
+
 @keyframes slide {
   0% {
     opacity: 0;
@@ -293,6 +296,7 @@ header {
 
   #banner-tablet-image {
     display: block;
+    margin-top: 120px;    
   }
 }
 
@@ -300,14 +304,17 @@ header {
 @media screen and (min-width: 1127px) {
   #banner-mobile-image {
     display: none;
+    
   }
 
   #banner-tablet-image {
     display: none;
+    
   }
 
   #banner-desktop-image {
     display: block;
+    margin-top: 120px;
   }
 }
 

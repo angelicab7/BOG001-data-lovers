@@ -16,10 +16,8 @@ let charactersContainer = document.querySelector('#characters-container');
 /*Scroll to the top */
 const backToTopButton = document.querySelector('#backTop-button');
 backToTopButton.addEventListener("click", () => {
-    /**
-     * Cada vez que hacemos click al botón Back To Top se lleva al usuario al principio de la pagina
-     * @see https://developer.mozilla.org/en-US/docs/Web/API/Window/scrollTo
-     */
+    // Cada vez que hacemos click al botón Back To Top se lleva al usuario al principio de la pagina
+
     window.scrollTo(0, 0);
 });
 
@@ -27,7 +25,7 @@ let filtersApplied = false;
 
 
 /*get characters*/
-async function getCharacters(page = 1) {
+export async function getCharacters(page = 1) {
     // Si currentPage es 31 ya no dejará pedir más datos a la API porque quiere decir que llegamos al final y ya pedimos todos los personajes
     if (currentPage <= totalPages && !filtersApplied) {
 
@@ -35,11 +33,6 @@ async function getCharacters(page = 1) {
         loadingIndicator.classList.add('active');
         // Con la variable isLoading podemos saber si la peticion está cargando
         isLoading = true;
-        /**
-         * @see https://developers.google.com/web/updates/2015/03/introduction-to-fetch
-         * @see https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Asynchronous/Async_await
-         * @see https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals
-         */
         const response = await fetch(`https://rickandmortyapi.com/api/character/?page=${page}`); // Template literal para concatenar
         const data = await response.json();
         // Cuando termina la peticion ponemos isLoading como falso para indicar que terminó y ya no hay nada cargando
@@ -63,8 +56,9 @@ async function getCharacters(page = 1) {
 
 getCharacters();
 
+
 /*Flip card*/
-function cardCharacter(urlImage, name, status, location, origin, specie) {
+export function cardCharacter(urlImage, name, status, location, origin, specie) {
     return (
         `
         <div class="column">
@@ -79,23 +73,23 @@ function cardCharacter(urlImage, name, status, location, origin, specie) {
                         <div class="card-back font-color">
                             <div class="card-content">
                                 <p class="card-description">
-                                    Status: ${status} <div class="conv-icon" id="main-menu-button">
-                                     <i class="fas fa-heart"></i> 
+                                     <div class="conv-icon" id="main-menu-button"> 
+                                     <i class="fas fa-heart"></i> Status: ${status}
                                     </div>
                                 </p>
                                 <p class="card-description">
-                                    Specie: ${specie} <div class="conv-icon" id="main-menu-button">
-                                    <i class="fas fa-user-circle"></i>
+                                     <div class="conv-icon" id="main-menu-button">
+                                    <i class="fas fa-user-circle"></i>  Specie: ${specie}
                                    </div>
                                 </p>
                                 <p class="card-description"> 
-                                    Origin: ${origin} <div class="conv-icon" id="main-menu-button">
-                                    <i class="fas fa-globe-americas"></i>
+                                    <div class="conv-icon" id="main-menu-button"> 
+                                    <i class="fas fa-globe-americas"></i>  Origin: ${origin}
                                    </div>
                                 </p>
                                 <p class="card-description">
-                                    Current location: ${location} <div class="conv-icon" id="main-menu-button">
-                                    <i class="fas fa-map-pin"></i>
+                                     <div class="conv-icon" id="main-menu-button"> 
+                                    <i class="fas fa-map-pin"></i> Current location: ${location}
                                    </div>
                                 </p>
                             </div>
@@ -110,10 +104,7 @@ function cardCharacter(urlImage, name, status, location, origin, specie) {
 
 
 /*Infinite Scroll*/
-
-/**
- * Calcula la altura del documento html
- */
+//Calcula la altura del documento html
 function getDocumentHeight() {
     const body = document.body; // Obtener todo el body del documento
     const html = document.documentElement; // Obtener todo el documento html
@@ -124,18 +115,13 @@ function getDocumentHeight() {
         html.clientHeight, html.scrollHeight, html.offsetHeight
     );
 };
-
-/**
- * Calcula la posicion actual del scroll
- */
+ //Calcula la posicion actual del scroll
 function getScrollTop() {
     return (window.pageYOffset !== undefined) ? window.pageYOffset : (document.documentElement || document.body.parentNode || document.body).scrollTop;
 }
 
+ //Este evento es llamado cada vez que el scroll se mueve
 
-/**
- * Este evento es llamado cada vez que el scroll se mueve
- */
 
 window.onscroll = function () {
     /**
@@ -169,7 +155,7 @@ const searchButton = document.querySelector('#searchButton');
 
 const filter = async () => {
 
-    if(searchForm.value) {
+    if (searchForm.value) {
         filtersApplied = true;
     } else {
         filtersApplied = false;
@@ -185,13 +171,124 @@ const filter = async () => {
             character.status,
             character.location.name,
             character.origin.name,
-            character.specie
+            character.species
         )
     );
 }
 
 searchButton.addEventListener('click', filter)
 
+
+
 /*Sort function*/
 
-const listToSort = [ specie ]
+const speciesSort = document.querySelector('#filter-input-species');
+
+
+export const species = async () => {
+
+    if (speciesSort.value) {
+        filtersApplied = true;
+    } else {
+        filtersApplied = false;
+    }
+    const response = await fetch(`https://rickandmortyapi.com/api/character/?species=${speciesSort.value}`);
+    const data = await response.json();
+    console.log(data);
+    charactersContainer.innerHTML = "";
+    data.results.forEach(character =>
+        charactersContainer.innerHTML += cardCharacter(
+            character.image,
+            character.name,
+            character.status,
+            character.location.name,
+            character.origin.name,
+            character.species
+        )
+    );
+}
+
+speciesSort.addEventListener('change', species)
+
+
+/*alphabethic
+async function searchOrder(specialName) {
+    console.log(specialName);
+
+    const response = await fetch(`https://rickandmortyapi.com/api/character/?name=${specialName}`);
+    const data = await response.json();
+    console.log(data);
+
+    //charactersContainer.innerHTML = "";
+    data.results.forEach(character =>
+        charactersContainer.innerHTML += cardCharacter(
+            character.image,
+            character.name,
+            character.status,
+            character.location.name,
+            character.origin.name,
+            character.species
+        )
+    );
+
+}
+const alphabethicSort = document.querySelector('#filter-input-order');
+
+const alphabethic = async () => {
+
+    if (alphabethicSort.value) {
+        filtersApplied = true;
+    } else {
+        filtersApplied = false;
+    }
+
+
+    if (alphabethicSort.value === "0") {
+        returngetCharacters();
+    }
+
+
+
+    else if (alphabethicSort.value === "1") {
+
+        let namesChar = [];
+        for (var i = currentPage; i <= totalPages; i++) {
+            const response = await fetch(`https://rickandmortyapi.com/api/character/?page=${i}`);
+            const data = await response.json();
+            console.log(data);
+            totalPages = data.info.pages;
+
+            data.results.forEach(character =>
+                namesChar.push(character.name));
+        }
+
+        namesChar.sort();
+        charactersContainer.innerHTML = "";
+        namesChar.forEach(element => console.log(element));
+        namesChar.forEach(element => searchOrder(element));
+    }
+
+    else if (alphabethicSort.value === "2") {
+
+        let namesChar = [];
+        for (var i = currentPage; i <= totalPages; i++) {
+            const response = await fetch(`https://rickandmortyapi.com/api/character/?page=${i}`);
+            const data = await response.json();
+            console.log(data);
+            totalPages = data.info.pages;
+
+            data.results.forEach(character =>
+                namesChar.push(character.name));
+        }
+
+        namesChar.sort();
+        namesChar.reverse();
+        charactersContainer.innerHTML = "";
+        namesChar.forEach(element => console.log(element));
+        namesChar.forEach(element => searchOrder(element));
+    }
+}
+
+alphabethicSort.addEventListener('change', alphabethic)*/
+
+

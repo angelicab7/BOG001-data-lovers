@@ -14,7 +14,7 @@
 
 </head>
 
-<body>
+<body background="images/background.jpeg" class="background">
     <!-- DATA -->
 
     <script src="./data/rickandmorty/rickandmorty.js"></script>
@@ -34,13 +34,15 @@
             <li class="menu-item"> <a href="">Contact</a></li>
         </ul>
     </header>
-
+     
+   
 
     <div class="container">
         <div class="section">
             <h1>Characters</h1>
         </div>
 
+       
 
         <section class="filters margin-b-1 margin-t-1">
             <div class="search-input margin-b-1">
@@ -51,23 +53,23 @@
             </div>
 
 
-            <select class="filter-input color margin-b-1 order">
-                <option value="order" class="order">Order</option>
-                <option value="a-z" class="order">Order A-Z</option>
-                <option value="z-a" class="order">Order Z-A</option>
+            <select class="filter-input color margin-b-1 order" id="filter-input-order">
+                <option value="0" class="order">Order</option>
+                <option value="1" class="order">Order A-Z</option>
+                <option value="2" class="order">Order Z-A</option>
             </select>
-            <select class="filter-input color margin-b-1 order">
-                <option value="species">Species</option>
-                <option value="species.Human">Humans</option>
-                <option value="species.Vampire">Vampire</option>
-                <option value="species.Disease">Disease</option>
-                <option value="species.unknown">Unknown</option>
-                <option value="species.Animal">Animal</option>
-                <option value="species.Robot">Robot</option>
-                <option value="species.Humanoid">Humanoid</option>
-                <option value="species.Alien">Alien</option>
-                <option value="species.Cronenberg">Cronenberg</option>
-                <option value="species.Poopybutthole">Poopybutthole</option>
+            <select class="filter-input color margin-b-1 order" id="filter-input-species">
+                <option value="">Species</option>
+                <option value="Human">Humans</option>
+                <option value="Vampire">Vampire</option>
+                <option value="Disease">Disease</option>
+                <option value="unknown">Unknown</option>
+                <option value="Animal">Animal</option>
+                <option value="Robot">Robot</option>
+                <option value="Humanoid">Humanoid</option>
+                <option value="Alien">Alien</option>
+                <option value="Cronenberg">Cronenberg</option>
+                <option value="Poopybutthole">Poopybutthole</option>
             </select>
         </section>
 
@@ -91,8 +93,6 @@
                     <i class="fas fa-arrow-circle-up"></i>
                 </div>
     </footer>
-
-    <script src="data.js" type="module"></script>
     <script src="main.js" type="module"></script>
 </body>
 
