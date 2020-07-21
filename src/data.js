@@ -153,7 +153,7 @@ window.onscroll = function () {
 const searchForm = document.querySelector('#searchIn');
 const searchButton = document.querySelector('#searchButton');
 
-const filter = async () => {
+export const filter = async () => {
 
     if (searchForm.value) {
         filtersApplied = true;
@@ -184,9 +184,7 @@ searchButton.addEventListener('click', filter)
 
 const speciesSort = document.querySelector('#filter-input-species');
 
-
 export const species = async () => {
-
     if (speciesSort.value) {
         filtersApplied = true;
     } else {

@@ -1,4 +1,5 @@
-import {getCharacters, species, cardCharacter} from './data.js';
+import {getCharacters, species, cardCharacter, filter} from './data.js';
+
 
 /* menu*/
 const buttonMenu = document.querySelector('#main-menu-button');
@@ -37,6 +38,7 @@ const indicator=document.querySelector(".slider-indicator").children;
      })
  }
 
+ 
 
 
 
