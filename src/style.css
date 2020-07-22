@@ -42,6 +42,9 @@ img {
   padding: 2rem;
   font-weight: bold;
 }
+.Icon-size{
+  margin-right: 0.5rem;
+}
 
 .loading-indicator.active {
   display: flex;

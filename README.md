@@ -75,6 +75,12 @@ Crear un sitio web agradable, que se adapte a todas las pantallas (Responsive) y
 5.  Por ultimo, en la primera pantalla, esta el botón Characters y le da click porque quiere saber mas sobre sus personajes favoritos.
 6. En la parte del footer, el usuario tiene a disposición los iconos de redes sociales con sus respectivos links para navegar y llenarse de mas conocimiento de la serie.
 
+*Problemas encontrados*
+1. Nos dimos cuenta que en la pagina principal en la parte del Fun facts y el boton de Characters, estaban mal distribuidos porque el botón estaba antes de los datos curiosos, y el usuario no sabia si primero ir a ver los personajes o los datos curiosos, así que decidimos dejar el botón abajo de los datos curiosos para que se pueda tener una experiencia mas completa.
+2.  Los usuarios también notaron que la sección de redes sociales, los iconos estaban muy pequeños y no les permitía dar bien el click para mirar las redes sociales, entonces aumentamos el tamaño de estos.
+3. En las tarjetas de los personajes, había mucha información concentrada, lo cual al usuario le parecía un poco canson, entonces le implementamos las Flip cards para que así en la parte de adelante se viera solo la foto y el nombre del personaje, y si el usuario quiere saber mas, solo al poner el mouse encima le va a mostrar la otra información.
+4.  Le implementamos un menú fijo en la parte de arriba y una flecha al final  para los usuarios que entren a nuestra pagina desde un dispositivo móvil  no tengan que devolverse hasta arriba para poder seguir navegando por la pagina.
+ 
 *Visualización de la data*
 
 1.  El usuario hace click en el botón Characters.
@@ -101,21 +107,78 @@ Solo necesitas un navegador y dar click en el siguiente link:
 
 *****************
 * [x] Usa VanillaJS.
-* [ ] No hace uso de `this`.
+* [x] No hace uso de `this`.
 * [ ] Pasa linter (`npm run pretest`)
 * [ ] Pasa tests (`npm test`)
 * [ ] Pruebas unitarias cubren un mínimo del 70% de statements, functions y
   lines y branches.
-* [ ] Incluye _Definición del producto_ clara e informativa en `README.md`.
-* [ ] Incluye historias de usuario en `README.md`.
-* [ ] Incluye _sketch_ de la solución (prototipo de baja fidelidad) en
+* [x] Incluye _Definición del producto_ clara e informativa en `README.md`.
+* [x] Incluye historias de usuario en `README.md`.
+* [x] Incluye _sketch_ de la solución (prototipo de baja fidelidad) en
   `README.md`.
-* [ ] Incluye _Diseño de la Interfaz de Usuario_ (prototipo de alta fidelidad)
+* [x] Incluye _Diseño de la Interfaz de Usuario_ (prototipo de alta fidelidad)
   en `README.md`.
 * [ ] Incluye link a Zeplin o Figma en `README.md`.
-* [ ] Incluye el listado de problemas que detectaste a través de tests de
+* [x] Incluye el listado de problemas que detectaste a través de tests de
   usabilidad en el `README.md`.
 * [ ] UI: Muestra lista y/o tabla con datos y/o indicadores.
-* [ ] UI: Permite ordenar data por uno o más campos (asc y desc).
-* [ ] UI: Permite filtrar data en base a una condición.
-* [ ] UI: Es _responsive_.
+* [x] UI: Permite ordenar data por uno o más campos (asc y desc).
+* [x] UI: Permite filtrar data en base a una condición.
+* [x] UI: Es _responsive_.
+ 
+
+ ****************************************************************************************
+ ## OBJETIVOS DE APRENDIZAJE
+
+El objetivo principal de este proyecto es que aprendas a diseñar y construir una
+interfaz web donde se pueda visualizar y manipular data, entendiendo lo que el
+usuario necesita.
+
+### HTML y CSS
+
+* [x] [Uso de HTML semántico.](https://developer.mozilla.org/en-US/docs/Glossary/Semantics#Semantics_in_HTML)
+* [x] Uso de selectores de CSS.
+* [x] Construir tu aplicación respetando el diseño realizado (maquetación).
+* [x] [Uso de flexbox en CSS.](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
+
+### DOM y Web APIs
+
+* [x] Uso de selectores del DOM.
+* [x] Manejo de eventos del DOM.
+* [x] [Manipulación dinámica del DOM.](https://developer.mozilla.org/es/docs/Referencia_DOM_de_Gecko/Introducci%C3%B3n)
+(appendChild |createElement | createTextNode| innerHTML | textContent | etc.)
+
+### JavaScript
+
+* [x] Uso de condicionales (if-else | switch | operador ternario)
+* [x] Uso de bucles (for | for..in | for..of | while)
+* [ ] Uso de funciones (parámetros | argumentos | valor de retorno)
+* [x] Manipular arrays (filter | map | sort | reduce)
+* [x] Manipular objects (key | value)
+* [x] Uso ES modules ([`import`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import)
+| [`export`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/export))
+* [x] Diferenciar entre expression y statements.
+* [ ] Diferenciar entre tipos de datos atómicos y estructurados.
+
+### Testing
+
+* [ ] [Testeo unitario.](https://jestjs.io/docs/es-ES/getting-started)
+
+### Estructura del código y guía de estilo
+
+* [ ] Organizar y dividir el código en módulos (Modularización)
+* [ ] Uso de identificadores descriptivos (Nomenclatura | Semántica)
+* [ ] Uso de linter (ESLINT)
+
+### Git y GitHub
+
+* [x] Uso de comandos de git (add | commit | pull | status | push)
+* [x] Manejo de repositorios de GitHub (clone | fork | gh-pages)
+* [x] Colaboración en Github (branches | pull requests | |tags)
+
+### UX
+
+* [x] Diseñar la aplicación pensando y entendiendo al usuario.
+* [x] Crear prototipos para obtener feedback e iterar.
+* [x] Aplicar los principios de diseño visual (contraste, alineación, jerarquía)
+* [x] Planear y ejecutar tests de usabilidad.
