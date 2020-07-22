@@ -1,4 +1,4 @@
-import {getCharacters, species, cardCharacter} from './data.js';
+import { getCharacters, species, cardCharacter } from './data.js';
 
 /* menu*/
 const buttonMenu = document.querySelector('#main-menu-button');
@@ -17,25 +17,30 @@ function toggleMenu(event) {
 
 //funcion slider//
 
-const slides=document.querySelector(".slider").children;
-const indicator=document.querySelector(".slider-indicator").children;
+const slidesElement = document.querySelector(".slider");
+const indicatorElement = document.querySelector(".slider-indicator");
 
- for(let i=0; i<indicator.length; i++){
-     indicator[i].addEventListener("click",function(){
-      
-        for(let j=0; j<indicator.length; j++){
-          indicator[j].classList.remove("active");
-        }
-         this.classList.add("active");
-         const id=this.getAttribute("data-id");
-        for(let j=0; j<slides.length; j++){
-            slides[j].classList.remove("active");
-        }
+if (slidesElement && indicatorElement) {
+    const slides = slidesElement.children;
+    const indicator = indicatorElement.children;
 
-         slides[id].classList.add("active");
+    for (let i = 0; i < indicator.length; i++) {
+        indicator[i].addEventListener("click", function () {
 
-     })
- }
+            for (let j = 0; j < indicator.length; j++) {
+                indicator[j].classList.remove("active");
+            }
+            this.classList.add("active");
+            const id = this.getAttribute("data-id");
+            for (let j = 0; j < slides.length; j++) {
+                slides[j].classList.remove("active");
+            }
+
+            slides[id].classList.add("active");
+
+        })
+    }
+}
 
 
 
