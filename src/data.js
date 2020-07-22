@@ -28,26 +28,7 @@ if (backToTopButton) {
 
 let filtersApplied = false;
 
-/**
- * Actualiza el HTML de los personajes
- */
-function updateCharactersHTML() {
-    charactersList = sortAlphabetic(sortOrder, charactersList);
-    let documentFragment = document.createDocumentFragment();
-    charactersContainer.innerHTML = "";
-    charactersList.forEach(character =>
-        documentFragment.appendChild(cardCharacter(
-            character.id,
-            character.image,
-            character.name,
-            character.status,
-            character.location.name,
-            character.origin.name,
-            character.species
-        )
-        ));
-    charactersContainer.appendChild(documentFragment);
-}
+
 
 
 /*get characters*/
@@ -142,8 +123,6 @@ function getScrollTop() {
 }
 
 //Este evento es llamado cada vez que el scroll se mueve
-
-
 window.onscroll = function () {
     /**
      * Con la pocision del scroll se le suman 40 pixeles
@@ -191,13 +170,8 @@ if (searchButton) {
     searchButton.addEventListener('click', filter)
 }
 
-
-
-/*Sort function*/
-
+/*filter species function*/
 const speciesSort = document.querySelector('#filter-input-species');
-
-
 export const species = async () => {
 
     if (speciesSort.value) {
@@ -214,6 +188,26 @@ export const species = async () => {
 if (speciesSort) {
     speciesSort.addEventListener('change', species)
 }
+
+//Organiza alfabeticamente
+function updateCharactersHTML() {
+    charactersList = sortAlphabetic(sortOrder, charactersList);
+    let documentFragment = document.createDocumentFragment();
+    charactersContainer.innerHTML = "";
+    charactersList.forEach(character =>
+        documentFragment.appendChild(cardCharacter(
+            character.id,
+            character.image,
+            character.name,
+            character.status,
+            character.location.name,
+            character.origin.name,
+            character.species
+        )
+        ));
+    charactersContainer.appendChild(documentFragment);
+}
+
 //A-Z
 const sortingSelector = document.querySelector('#filter-input-order');
 
