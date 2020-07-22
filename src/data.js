@@ -101,8 +101,6 @@ export function cardCharacter(urlImage, name, status, location, origin, specie) 
     )
 };
 
-
-
 /*Infinite Scroll*/
 //Calcula la altura del documento html
 function getDocumentHeight() {
@@ -244,9 +242,6 @@ const alphabethic = async () => {
     if (alphabethicSort.value === "0") {
         returngetCharacters();
     }
-
-
-
     else if (alphabethicSort.value === "1") {
 
         let namesChar = [];
@@ -261,6 +256,7 @@ const alphabethic = async () => {
         }
 
         namesChar.sort();
+
         charactersContainer.innerHTML = "";
         namesChar.forEach(element => console.log(element));
         namesChar.forEach(element => searchOrder(element));
@@ -287,6 +283,6 @@ const alphabethic = async () => {
     }
 }
 
-alphabethicSort.addEventListener('change', alphabethic)*/
+alphabethicSort.addEventListener('change', alphabethic)
 
 
