@@ -5,7 +5,6 @@ const buttonMenu = document.querySelector('#main-menu-button');
 buttonMenu.addEventListener('click', toggleMenu);
 
 const mainMenu = document.querySelector('.main-menu');
-
 let menuOpened = false;
 
 /**

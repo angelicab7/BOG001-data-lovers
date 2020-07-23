@@ -232,6 +232,7 @@ header {
     transform: translateX(0px);
   }
 }
+
 .funfacts .slider p {
   font-size: 18px;
   color: white;
@@ -312,11 +313,7 @@ header {
 
 /* Desktop---------------------- */
 @media screen and (min-width: 1127px) {
-  #banner-mobile-image {
-    display: none;
-  }
-
-  #banner-tablet-image {
+    #banner-tablet-image {
     display: none;
   }
 
