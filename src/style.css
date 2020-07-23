@@ -28,6 +28,17 @@ html {
   box-sizing: border-box;
 }
 
+.background {
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+  background-image: linear-gradient(
+      rgba(247, 241, 241, 0.7),
+      rgba(247, 241, 241, 0.7)
+    ),
+    url(images/background.jpeg);
+}
+
 img {
   width: 100%;
   height: auto;
@@ -42,7 +53,7 @@ img {
   padding: 2rem;
   font-weight: bold;
 }
-.Icon-size{
+.Icon-size {
   margin-right: 0.5rem;
 }
 
@@ -54,7 +65,7 @@ img {
 header {
   width: 100%;
   padding: 1rem;
-  background:black;
+  background: black;
   display: flex;
   flex-direction: column;
   position: fixed;
@@ -71,9 +82,8 @@ header {
   border: 2px solid #11b0c8;
   border-radius: 5px;
 }
-.font-color{
-  background-color:#d6f2f7 ;
-  
+.font-color {
+  background-color: #d6f2f7;
 }
 .Icon-menu {
   display: flex;
@@ -129,7 +139,7 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  background:black;
+  background: black;
 }
 
 .banner img {
@@ -163,7 +173,7 @@ header {
 }
 .button * {
   text-decoration: none;
-  color:white;
+  color: white;
   font-size: 1.5rem;
 }
 
@@ -171,13 +181,12 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
- padding: 6rem;
+  padding: 6rem;
 }
 
 /*Slider styles*/
 
 .funfacts {
-  background-color: white;
   width: 100%;
   padding: 3rem;
 }
@@ -203,7 +212,7 @@ header {
   margin: auto;
   text-align: center;
   padding: 30px;
-  background:  black;
+  background: black;
 }
 .funfacts .slider .slide {
   display: none;
@@ -212,7 +221,6 @@ header {
   display: block;
   animation: slide 1s ease;
 }
-
 
 @keyframes slide {
   0% {
@@ -252,7 +260,7 @@ header {
 /*footer*/
 
 #boxblack {
-  background:black;
+  background: black;
   padding: 1rem;
 }
 
@@ -262,22 +270,20 @@ header {
   font-size: 1rem;
 }
 
-
 .Icons-socialMedia {
-  color:#11b0c8;
+  color: #11b0c8;
   cursor: pointer;
   margin-top: auto;
   font-size: 2rem;
   justify-content: flex-end;
-  
 }
-.Icons-socialMedia > a{
+.Icons-socialMedia > a {
   padding: 0.5rem;
 }
-.text-color{
-  color:#11b0c8;
+.text-color {
+  color: #11b0c8;
 }
-.text-footer{
+.text-footer {
   margin-top: 2rem;
 }
 
@@ -300,7 +306,7 @@ header {
 
   #banner-tablet-image {
     display: block;
-    margin-top: 120px;    
+    margin-top: 120px;
   }
 }
 
@@ -308,12 +314,10 @@ header {
 @media screen and (min-width: 1127px) {
   #banner-mobile-image {
     display: none;
-    
   }
 
   #banner-tablet-image {
     display: none;
-    
   }
 
   #banner-desktop-image {
@@ -321,5 +325,3 @@ header {
     margin-top: 120px;
   }
 }
-
-
