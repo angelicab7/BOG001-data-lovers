@@ -4,15 +4,25 @@ import { getCharacters, species, cardCharacter } from './data.js';
 const buttonMenu = document.querySelector('#main-menu-button');
 buttonMenu.addEventListener('click', toggleMenu);
 
+const mainMenu = document.querySelector('.main-menu');
+
+let menuOpened = false;
+
 /**
  * Toggles main menu
  * @param {Event} event 
  */
 function toggleMenu(event) {
-    const mainMenu = document.querySelector('.main-menu');
     mainMenu.classList.toggle('active');
+    menuOpened = !menuOpened;
 }
 
+window.addEventListener('click', (event) => {
+    if (menuOpened && !mainMenu.contains(event.target) && !buttonMenu.contains(event.target)) {
+        mainMenu.classList.remove('active');
+        menuOpened = false;
+    }
+});
 
 
 //funcion slider//
