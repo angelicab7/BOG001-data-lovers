@@ -186,76 +186,52 @@ header {
 
 /*Slider styles*/
 
-.funfacts {
-  width: 100%;
-  padding: 3rem;
-}
-
-.container {
-  max-width: 1170px;
+.funFacts {
+  max-width: 500px;
   margin: auto;
-}
-.funfacts .title {
-  margin-bottom: 60px;
-}
-.funfacts .title h1 {
+  margin-top: 100px;
   text-align: center;
+  padding: 30px;
   color: #11b0c8;
-  text-transform: uppercase;
-  font-size: 36px;
-  margin: 0;
+  font-size: 20px;
+
 }
 
-.funfacts .slider {
-  border: 1px solid black;
-  max-width: 600px;
+.slide-contenedor{  
+  max-width: 300px;
   margin: auto;
   text-align: center;
   padding: 30px;
-  background: black;
-}
-.funfacts .slider .slide {
-  display: none;
-}
-.funfacts .slider .slide.active {
-  display: block;
-  animation: slide 1s ease;
+  background: white;
 }
 
-@keyframes slide {
-  0% {
-    opacity: 0;
-    transform: translateX(-15px);
+.slide-contenedor p {
+    font-size: 15px;
+    color: black;
+    word-spacing: 2px;
+    line-height : 20px;
+    margin-top: 30px;
+    font-weight: lighter;
+    text-align: justify;   
+   
   }
-  100% {
-    opacity: 1;
-    transform: translateX(0px);
+
+  .slide-contenedor h1 {
+    font-size: 20px;
+    color: black;
+    line-height : 25px;
+    font-weight: bold;
+    margin-top: 5px;
+    font-weight: bold;
+   
   }
-}
 
-.funfacts .slider p {
-  font-size: 18px;
-  color: white;
-  word-spacing: 2px;
-}
 
-.funfacts .slider-indicator {
-  text-align: center;
-  padding-top: 30px;
-}
-.funfacts .slider-indicator img {
-  max-height: 50px;
-  max-width: 50px;
-  border-radius: 50%;
-  display: inline-block;
-  margin: 0 8px;
-  opacity: 0.2;
-  border: 4px solid white;
-  cursor: pointer;
-  transition: opacity 1s ease;
-}
-.funfacts .slider-indicator img.active {
-  opacity: 1;
+.Slider img{
+    width: 100%;   
+    vertical-align: top;
+    margin-top: 30px;
+    
 }
 
 /*footer*/
@@ -278,6 +254,7 @@ header {
   font-size: 2rem;
   justify-content: flex-end;
 }
+
 .Icons-socialMedia > a {
   padding: 0.5rem;
 }
@@ -321,4 +298,17 @@ header {
     display: block;
     margin-top: 120px;
   }
+
+    .slide-contenedor {  
+      max-width: 600px;
+      }
+   
+      .slide-contenedor h1 {
+        font-size: 25px;             
+      }      
+      .slide-contenedor p {
+        font-size: 18px;
+              
+      }
+ 
 }
