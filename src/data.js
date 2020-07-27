@@ -52,9 +52,6 @@ export async function getCharacters(page = 1) {
     }
 };
 
-getCharacters();
-
-
 /*Flip card*/
 export function cardCharacter(id, urlImage, name, status, location, origin, specie) {
     const container = document.createElement('div');
@@ -189,7 +186,6 @@ if (speciesSort) {
     speciesSort.addEventListener('change', species)
 }
 
-//Organiza alfabeticamente
 function updateCharactersHTML() {
     charactersList = sortAlphabetic(sortOrder, charactersList);
     let documentFragment = document.createDocumentFragment();
@@ -211,6 +207,7 @@ function updateCharactersHTML() {
 //A-Z
 const sortingSelector = document.querySelector('#filter-input-order');
 
+//Organiza alfabeticamente
 if (sortingSelector) {
     sortingSelector.addEventListener('change', (event) => {
         sortOrder = event.target.value;
@@ -218,11 +215,16 @@ if (sortingSelector) {
     })
 }
 
+/**
+ * 
+ * @param {string} order - a-z, z-a
+ * @param {Array} list 
+ */
 export function sortAlphabetic(order, list) {
     if (!order) {
         return list;
     }
-
+    //se clona el objeto
     const orderedList = [...list];
     orderedList.sort(function (a, b) {
         var nameA = a.name.toUpperCase(); // ignore upper and lowercase
