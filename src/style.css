@@ -186,60 +186,52 @@ header {
 
 /*Slider styles*/
 
-.slide-contenedor{
-  
+.funFacts {
   max-width: 500px;
   margin: auto;
-  margin-top: 200px;
+  margin-top: 100px;
   text-align: center;
   padding: 30px;
-  background: black;
+  color: #11b0c8;
+  font-size: 20px;
+
+}
+
+.slide-contenedor{  
+  max-width: 300px;
+  margin: auto;
+  text-align: center;
+  padding: 30px;
+  background: white;
 }
 
 .slide-contenedor p {
-    font-size: 18px;
-    color: white;
+    font-size: 15px;
+    color: black;
     word-spacing: 2px;
-    line-height : 25px;
+    line-height : 20px;
+    margin-top: 30px;
+    font-weight: lighter;
+    text-align: justify;   
    
   }
 
-.miSlider img{
-    width: 80%;   
+  .slide-contenedor h1 {
+    font-size: 20px;
+    color: black;
+    line-height : 25px;
+    font-weight: bold;
+    margin-top: 5px;
+    font-weight: bold;
+   
+  }
+
+
+.Slider img{
+    width: 100%;   
     vertical-align: top;
+    margin-top: 30px;
     
-}
-/*
-.barras{
-    bottom: 0;
-    width: 100%;
-    display: flex;
-    margin-bottom:40px;
-    position: relative;
-}
-
-.barra{
-    cursor: pointer;
-    height:2px;
-    width: 25px;
-    margin: 0 2px;
-    background: #dcdde1;
-    display: inline-block;
-    margin-left: 3px;
-}
-
-.active{
-    background-color: black;
-}
-
-.fade{
-    animation-name: fade;
-    animation-duration: 2.5s;    
-}
-
-@keyframes fade {
-    from {opacity: .4;}
-    to{opacity:1;}
 }
 
 /*footer*/
@@ -262,6 +254,7 @@ header {
   font-size: 2rem;
   justify-content: flex-end;
 }
+
 .Icons-socialMedia > a {
   padding: 0.5rem;
 }
@@ -305,4 +298,17 @@ header {
     display: block;
     margin-top: 120px;
   }
+
+    .slide-contenedor {  
+      max-width: 600px;
+      }
+   
+      .slide-contenedor h1 {
+        font-size: 25px;             
+      }      
+      .slide-contenedor p {
+        font-size: 18px;
+              
+      }
+ 
 }
