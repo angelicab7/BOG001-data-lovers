@@ -34,32 +34,39 @@ window.addEventListener('click', (event) => {
 });
 
 
-//funcion slider//
+//funcion slider automatico//
+let indice = 1;
+muestraSlides(indice);
 
-const slidesElement = document.querySelector(".slider");
-const indicatorElement = document.querySelector(".slider-indicator");
 
-if (slidesElement && indicatorElement) {
-    const slides = slidesElement.children;
-    const indicator = indicatorElement.children;
-
-    for (let i = 0; i < indicator.length; i++) {
-        indicator[i].addEventListener("click", function () {
-
-            for (let j = 0; j < indicator.length; j++) {
-                indicator[j].classList.remove("active");
-            }
-            this.classList.add("active");
-            const id = this.getAttribute("data-id");
-            for (let j = 0; j < slides.length; j++) {
-                slides[j].classList.remove("active");
-            }
-
-            slides[id].classList.add("active");
-
-        })
-    }
+function posicionSlide(n){
+    muestraSlides(indice=n);
 }
+setInterval(function tiempo(){
+    muestraSlides(indice+=1)
+},10000);
+function muestraSlides(n){
+    let i;
+    let slides = document.getElementsByClassName('Slider');
+    let barras = document.getElementsByClassName('barra');
+
+    if(n > slides.length){
+        indice = 1;
+    }
+    if(n < 1){
+        indice = slides.length;
+    }
+    for(i = 0; i < slides.length; i++){
+        slides[i].style.display = 'none';
+    }
+    for(i = 0; i < barras.length; i++){
+        barras[i].className = barras[i].className.replace(" active", "");
+    }
+
+    slides[indice-1].style.display = 'block';
+    barras[indice-1].className += ' active';
+}
+
 
 /*Infinite Scroll Calcula la altura del documento html*/
 function getDocumentHeight() {
