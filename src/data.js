@@ -16,6 +16,21 @@ let charactersList = [];
 
 let sortOrder = '';
 
+/*Scroll to the top */
+const backToTopButton = document.querySelector('#backTop-button');
+if (backToTopButton) {
+    backToTopButton.addEventListener("click", () => {
+        // Cada vez que hacemos click al botón Back To Top se lleva al usuario al principio de la pagina
+
+        window.scrollTo(0, 0);
+    });
+}
+
+let filtersApplied = false;
+
+
+
+
 /*get characters*/
 export async function getCharacters(page = 1) {
     // Si currentPage es 31 ya no dejará pedir más datos a la API porque quiere decir que llegamos al final y ya pedimos todos los personajes
@@ -36,108 +51,6 @@ export async function getCharacters(page = 1) {
         updateCharactersHTML();
     }
 };
-
-getCharacters();
-
-
-//Buscador//
-
-const searchForm = document.querySelector('#searchIn');
-const searchButton = document.querySelector('#searchButton');
-
-const filter = async () => {
-
-    if (searchForm.value) {
-        filtersApplied = true;
-    } else {
-        filtersApplied = false;
-    }
-    const response = await fetch(`https://rickandmortyapi.com/api/character/?name=${encodeURIComponent(searchForm.value)}`);
-    const data = await response.json();
-    charactersList = data.results;
-    updateCharactersHTML();
-}
-
-if (searchButton) {
-    searchButton.addEventListener('click', filter)
-}
-
-/*filter species function*/
-const speciesSort = document.querySelector('#filter-input-species');
-export const species = async () => {
-
-    if (speciesSort.value) {
-        filtersApplied = true;
-    } else {
-        filtersApplied = false;
-    }
-    const response = await fetch(`https://rickandmortyapi.com/api/character/?species=${speciesSort.value}`);
-    const data = await response.json();
-    charactersList = data.results;
-    updateCharactersHTML();
-}
-
-if (speciesSort) {
-    speciesSort.addEventListener('change', species)
-}
-
-//Organiza alfabeticamente
-function updateCharactersHTML() {
-    charactersList = sortAlphabetic(sortOrder, charactersList);
-    let documentFragment = document.createDocumentFragment();
-    charactersContainer.innerHTML = "";
-    charactersList.forEach(character =>
-        documentFragment.appendChild(cardCharacter(
-            character.id,
-            character.image,
-            character.name,
-            character.status,
-            character.location.name,
-            character.origin.name,
-            character.species
-        )
-        ));
-    charactersContainer.appendChild(documentFragment);
-}
-
-//A-Z
-const sortingSelector = document.querySelector('#filter-input-order');
-
-if (sortingSelector) {
-    sortingSelector.addEventListener('change', (event) => {
-        sortOrder = event.target.value;
-        updateCharactersHTML();
-    })
-}
-
-export function sortAlphabetic(order, list) {
-    if (!order) {
-        return list;
-    }
-
-    const orderedList = [...list];
-    orderedList.sort(function (a, b) {
-        var nameA = a.name.toUpperCase(); // ignore upper and lowercase
-        var nameB = b.name.toUpperCase(); // ignore upper and lowercase
-        if (nameA < nameB) {
-            if (order === "z-a") {
-                return 1;
-            }
-            return -1;
-        }
-        if (nameA > nameB) {
-            if (order === "z-a") {
-                return -1;
-            }
-            return 1;
-        }
-
-        // names must be equal
-        return 0;
-    });
-
-    return orderedList;
-}
 
 /*Flip card*/
 export function cardCharacter(id, urlImage, name, status, location, origin, specie) {
@@ -183,20 +96,11 @@ export function cardCharacter(id, urlImage, name, status, location, origin, spec
     `;
 
     container.innerHTML = cardInnerTemplate;
+
     return container;
 };
 
-/*Scroll to the top */
-const backToTopButton = document.querySelector('#backTop-button');
-if (backToTopButton) {
-    backToTopButton.addEventListener("click", () => {
-        // Cada vez que hacemos click al botón Back To Top se lleva al usuario al principio de la pagina
 
-        window.scrollTo(0, 0);
-    });
-}
-
-let filtersApplied = false;
 
 /*Infinite Scroll*/
 //Calcula la altura del documento html
@@ -238,3 +142,109 @@ window.onscroll = function () {
         }
     }
 };
+
+
+
+//Buscador//
+
+const searchForm = document.querySelector('#searchIn');
+const searchButton = document.querySelector('#searchButton');
+
+const filter = async () => {
+
+    if (searchForm.value) {
+        filtersApplied = true;
+    } else {
+        filtersApplied = false;
+    }
+    const response = await fetch(`https://rickandmortyapi.com/api/character/?name=${encodeURIComponent(searchForm.value)}`);
+    const data = await response.json();
+    charactersList = data.results;
+    updateCharactersHTML();
+}
+
+if (searchButton) {
+    searchButton.addEventListener('click', filter)
+}
+
+/*filter species function*/
+const speciesSort = document.querySelector('#filter-input-species');
+export const species = async () => {
+
+    if (speciesSort.value) {
+        filtersApplied = true;
+    } else {
+        filtersApplied = false;
+    }
+    const response = await fetch(`https://rickandmortyapi.com/api/character/?species=${speciesSort.value}`);
+    const data = await response.json();
+    charactersList = data.results;
+    updateCharactersHTML();
+}
+
+if (speciesSort) {
+    speciesSort.addEventListener('change', species)
+}
+
+function updateCharactersHTML() {
+    charactersList = sortAlphabetic(sortOrder, charactersList);
+    let documentFragment = document.createDocumentFragment();
+    charactersContainer.innerHTML = "";
+    charactersList.forEach(character =>
+        documentFragment.appendChild(cardCharacter(
+            character.id,
+            character.image,
+            character.name,
+            character.status,
+            character.location.name,
+            character.origin.name,
+            character.species
+        )
+        ));
+    charactersContainer.appendChild(documentFragment);
+}
+
+//A-Z
+const sortingSelector = document.querySelector('#filter-input-order');
+
+//Organiza alfabeticamente
+if (sortingSelector) {
+    sortingSelector.addEventListener('change', (event) => {
+        sortOrder = event.target.value;
+        updateCharactersHTML();
+    })
+}
+
+/**
+ * 
+ * @param {string} order - a-z, z-a
+ * @param {Array} list 
+ */
+export function sortAlphabetic(order, list) {
+    if (!order) {
+        return list;
+    }
+    //se clona el objeto
+    const orderedList = [...list];
+    orderedList.sort(function (a, b) {
+        var nameA = a.name.toUpperCase(); // ignore upper and lowercase
+        var nameB = b.name.toUpperCase(); // ignore upper and lowercase
+        if (nameA < nameB) {
+            if (order === "z-a") {
+                return 1;
+            }
+            return -1;
+        }
+        if (nameA > nameB) {
+            if (order === "z-a") {
+                return -1;
+            }
+            return 1;
+        }
+
+        // names must be equal
+        return 0;
+    });
+
+    return orderedList;
+}
