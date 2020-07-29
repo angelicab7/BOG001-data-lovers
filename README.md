@@ -105,11 +105,11 @@ Crear un sitio web agradable, que se adapte a todas las pantallas (Responsive) y
 
 Solo necesitas un navegador y dar click en el siguiente link:
 
-*****************
+************************************************************************
 * [x] Usa VanillaJS.
 * [x] No hace uso de `this`.
 * [ ] Pasa linter (`npm run pretest`)
-* [ ] Pasa tests (`npm test`)
+* [x] Pasa tests (`npm test`)
 * [ ] Pruebas unitarias cubren un mínimo del 70% de statements, functions y
   lines y branches.
 * [x] Incluye _Definición del producto_ clara e informativa en `README.md`.
@@ -121,7 +121,7 @@ Solo necesitas un navegador y dar click en el siguiente link:
 * [ ] Incluye link a Zeplin o Figma en `README.md`.
 * [x] Incluye el listado de problemas que detectaste a través de tests de
   usabilidad en el `README.md`.
-* [ ] UI: Muestra lista y/o tabla con datos y/o indicadores.
+* [x] UI: Muestra lista y/o tabla con datos y/o indicadores.
 * [x] UI: Permite ordenar data por uno o más campos (asc y desc).
 * [x] UI: Permite filtrar data en base a una condición.
 * [x] UI: Es _responsive_.
@@ -144,8 +144,8 @@ usuario necesita.
 ### DOM y Web APIs
 
 * [x] Uso de selectores del DOM.
-* [ ] Manejo de eventos del DOM.
-* [ ] [Manipulación dinámica del DOM.](https://developer.mozilla.org/es/docs/Referencia_DOM_de_Gecko/Introducci%C3%B3n)
+* [x] Manejo de eventos del DOM.
+* [x] [Manipulación dinámica del DOM.](https://developer.mozilla.org/es/docs/Referencia_DOM_de_Gecko/Introducci%C3%B3n)
 (appendChild | createTextNode|createElement etc.)
 * [x] [Manipulación dinámica del DOM.](https://developer.mozilla.org/es/docs/Referencia_DOM_de_Gecko/Introducci%C3%B3n)
 ( innerHTML | textContent | etc.)
@@ -155,22 +155,22 @@ usuario necesita.
 
 * [x] Uso de condicionales (if-else | switch | pendiente operador ternario)
 * [x] Uso de bucles (for | for..in | for..of | while)
-* [ ] Uso de funciones (parámetros | argumentos | valor de retorno) pendiente parametro y argumento
-* [ ] Manipular arrays (filter | map | sort | reduce) reconstruir funciones para utilizarlas 
+* [x] Uso de funciones (parámetros | argumentos | valor de retorno) pendiente parametro y argumento
+* [x] Manipular arrays (filter | map | sort | reduce) reconstruir funciones para utilizarlas 
 * [x] Manipular objects (key | value)
-* [ ] Uso ES modules ([`import`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import)
+* [x] Uso ES modules ([`import`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import)
 | [`export`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/export))
 * [x] Diferenciar entre expression y statements.
-* [ ] Diferenciar entre tipos de datos atómicos y estructurados.
+* [x] Diferenciar entre tipos de datos atómicos y estructurados.
 
 ### Testing
 
-* [ ] [Testeo unitario.](https://jestjs.io/docs/es-ES/getting-started)
+* [x] [Testeo unitario.](https://jestjs.io/docs/es-ES/getting-started)
 
 ### Estructura del código y guía de estilo
 
-* [ ] Organizar y dividir el código en módulos (Modularización)
-* [ ] Uso de identificadores descriptivos (Nomenclatura | Semántica)
+* [x] Organizar y dividir el código en módulos (Modularización)
+* [x] Uso de identificadores descriptivos (Nomenclatura | Semántica)
 * [ ] Uso de linter (ESLINT)
 
 ### Git y GitHub
